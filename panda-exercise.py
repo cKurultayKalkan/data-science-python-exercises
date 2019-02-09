@@ -39,9 +39,23 @@ average_np = np.mean(dataFrame1.SALARY)
 print(average_np)
 
 dataFrame1["salary_level"] = ["high" if salary > average else "low" for salary in dataFrame1.SALARY]
-
 print(dataFrame1)
 
 dataFrame1.columns = [each.lower() for each in dataFrame1.columns]
-
 print(dataFrame1)
+
+dataFrame1.drop(["new_feature"], axis=1, inplace=True)
+print(dataFrame1)
+
+data1 = dataFrame1.head()
+data2 = dataFrame1.tail()
+
+# vertical
+data_concat = pd.concat([data1, data2], axis=0)
+print(data_concat)
+
+# horizontal
+salary = dataFrame1.salary
+age = dataFrame1.age
+data_h_concat = pd.concat([salary, age], axis=1)
+print(data_h_concat)

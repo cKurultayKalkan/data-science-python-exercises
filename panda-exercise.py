@@ -10,3 +10,8 @@ dataFrame1 = pd.DataFrame(dictionary)
 head = dataFrame1.head()
 
 tail = dataFrame1.tail()
+
+print(dataFrame1.columns)
+print(dataFrame1.info())
+print(dataFrame1.dtypes)
+print(dataFrame1.describe())

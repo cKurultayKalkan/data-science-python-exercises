@@ -60,3 +60,15 @@ plt.xlabel('cm')
 plt.ylabel('frequency')
 plt.title('histogram')
 plt.show()
+
+import numpy as np
+
+x = np.array([1, 2, 3, 4, 5, 6, 7])
+a = ["turkey", "usa", "a", "b", "c", "d", "s"]
+y = x * 2 + 5
+
+plt.bar(a, y)
+plt.title('bar plot')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()

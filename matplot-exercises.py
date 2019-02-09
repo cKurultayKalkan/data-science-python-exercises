@@ -72,3 +72,16 @@ plt.title('bar plot')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
+
+df1.plot(grid=True, alpha=0.9, subplots=True)
+plt.show()
+
+plt.subplot(2, 1, 1)
+plt.plot(setosa.Id, setosa.PetalLengthCm, color="red", label="setosa")
+plt.ylabel('setosa - Petal')
+
+plt.subplot(2, 1, 2)
+plt.plot(versicolor.Id, versicolor.PetalLengthCm, color="green", label="versicolor")
+plt.ylabel('versicolor - Petal')
+
+plt.show()

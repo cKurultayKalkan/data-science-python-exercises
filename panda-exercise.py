@@ -59,3 +59,18 @@ salary = dataFrame1.salary
 age = dataFrame1.age
 data_h_concat = pd.concat([salary, age], axis=1)
 print(data_h_concat)
+
+# %% transforming data
+
+dataFrame1["list_comp"] = [each * 2 for each in dataFrame1.age]
+print(dataFrame1)
+
+
+# apply
+
+def multiply(num):
+    return num * 2
+
+
+dataFrame1["apply_method"] = dataFrame1.age.apply(multiply)
+print(dataFrame1)

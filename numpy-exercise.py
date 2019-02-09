@@ -55,3 +55,21 @@ print("array3")
 print(array3)
 print("array6 column_stack array2 and array3")
 print(array6)
+
+array7 = np.array([[1, 2], [3, 4]])
+
+array8 = np.array([[-1, -2], [-3, -4]])
+
+print("array7")
+print(array7)
+print("array8")
+print(array8)
+
+print("vertical concat")
+print(np.vstack((array7, array8)))
+
+print("horizontal concat")
+print(np.hstack((array7, array8)))
+
+print("column stack")
+print(np.column_stack((array7, array8)))
